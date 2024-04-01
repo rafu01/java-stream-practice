@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -34,6 +35,13 @@ public class Main {
                 .forEach(key -> System.out.println(key + " : " + countEachAge.get(key)));
         countEachAge.entrySet().forEach(keyValue -> System.out.println(keyValue.getKey() + "" + keyValue.getValue()));
         countEachAge.forEach((key, value) -> System.out.println(key + "" + value));
+
+        List<Integer> nums = Arrays.asList(1,2,3,4,5,6);
         // find average
+        nums.stream().mapToDouble(Integer::doubleValue).average().orElse(0);
+        // find average of odds
+        nums.stream().filter(num -> num%2!=0).mapToDouble(Integer::doubleValue).average().orElse(0);
+        // find distinct
+        nums.stream().distinct();
     }
 }
