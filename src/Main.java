@@ -34,5 +34,6 @@ public class Main {
                 .forEach(key -> System.out.println(key + " : " + countEachAge.get(key)));
         countEachAge.entrySet().forEach(keyValue -> System.out.println(keyValue.getKey() + "" + keyValue.getValue()));
         countEachAge.forEach((key, value) -> System.out.println(key + "" + value));
+        // find average
     }
 }
